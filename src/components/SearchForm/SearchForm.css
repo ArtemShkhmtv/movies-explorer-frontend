@@ -33,6 +33,11 @@
   border-radius: 15px;
 }
 
+.search-form__btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .filter-checkbox {
   display: flex;
   margin-top: 32px;

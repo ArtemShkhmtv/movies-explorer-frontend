@@ -6,8 +6,8 @@ function SavedMovies() {
   return(
     <>
       <SearchForm />
-      <Preloader />
       <MoviesCardList />
+      <Preloader />
     </>
   )
 }

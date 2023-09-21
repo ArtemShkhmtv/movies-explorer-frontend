@@ -64,6 +64,19 @@
   margin: 0;
 }
 
+.login__link-to-sign-up {
+  color: rgba(52, 86, 243, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  text-decoration: none;
+}
+
+.login__link-to-sign-in:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 769px) {
   .login {
     margin-top: 160px;

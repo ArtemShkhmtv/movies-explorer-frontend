@@ -50,6 +50,11 @@
   line-height: 17px;
 }
 
+.register__submit-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .register-button__text {
   font-size: 14px;
   font-weight: 400;
@@ -57,6 +62,19 @@
   color: rgba(160, 160, 160, 1);
   text-align: center;
   margin: 0;
+}
+
+.register__link-to-sign-in {
+  color: rgba(52, 86, 243, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  text-decoration: none;
+}
+
+.register__link-to-sign-in:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 769px) {

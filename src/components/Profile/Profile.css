@@ -18,14 +18,16 @@
   gap: 1px;
   max-width: 410px;
   width: 100%;
-  background-color: rgba(232, 232, 232, 1);
 }
 
 .profile__wrapper {
-  background-color: rgba(255, 255, 255, 1);
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
+}
+
+.profile__wrapper:first-child {
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
 }
 
 .profile__input-name {
@@ -45,7 +47,6 @@
   border: none;
   text-align: end;
   background-color: rgba(255, 255, 255, 1);
-
 }
 
 .profile__input:focus {
@@ -54,13 +55,17 @@
 
 .profile__save-button {
   width: 100%;
-  margin: 0;
+  margin: 201px 0 16px 0;
   padding: 10px 0;
   border: none;
   background: rgba(52, 86, 243, 1);
   color: rgba(255, 255, 255, 1);
   border-radius: 3px;
   display: none;
+}
+
+.profile__save-button_activ {
+  display: block;
 }
 
 .profile__save-button:hover {
@@ -78,6 +83,10 @@
   line-height: 1.23;
 }
 
+.profile__edit-button_hidden {
+  display: none;
+}
+
 .profile__edit-button:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -92,6 +101,10 @@
   background-color: rgba(255, 255, 255, 1);
   color: rgba(255, 48, 85, 1);
   border: none;
+}
+
+.profile__sign-out-button_hidden {
+  display: none;
 }
 
 .profile__sign-out-button:hover {

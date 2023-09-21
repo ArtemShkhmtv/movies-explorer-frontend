@@ -11,32 +11,9 @@ function MoviesCardList () {
         <MoviesCard/>
         <MoviesCard/>
         <MoviesCard/>
-        {/* <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/> */}
-        {/* <MoviesCard/>
         <MoviesCard/>
         <MoviesCard/>
         <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/> */}
-          {/* {cards.map((element) => {
-            return (
-              <Card
-                key={element._id}
-                link={element.link}
-                name={element.name}
-                likes={element.likes}
-                onCardClick={onCardClick}
-                owner={element.owner}
-                onCardLike={onCardLike}
-                element={element}
-                onCardDelete={onCardDelete}
-              />
-            );
-          })} */}
       </div>
       <button className='cards-grid__add-btn'>Ещё</button>
     </section>

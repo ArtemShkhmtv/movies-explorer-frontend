@@ -31,9 +31,9 @@ function Login() {
         </button>
         <p className="login-button__text">
         Ещё не зарегистрированы?{" "}
-        {/* <Link className="login__link-to-sign-up" to="/sign-in">
+        <Link className="login__link-to-sign-up" to="/signin">
           Регистрация
-        </Link> */}
+        </Link>
       </p>
       </form>
     </section>

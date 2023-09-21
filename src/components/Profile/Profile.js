@@ -1,5 +1,16 @@
+import React from 'react';
 
 function Profile() {
+  const [isProfileUnDisabled, setProfileUnDisabled] = React.useState(false);
+
+  function handleProfileUnDisabled() {
+    setProfileUnDisabled(false);
+  }
+
+  function handleProfileActive() {
+    setProfileUnDisabled(true);
+  }
+
   return (
     <>
       <section className='profile'>
@@ -11,7 +22,7 @@ function Profile() {
               className='profile__input'
               value='Виталий'
               name='name'
-              disabled
+              disabled = {isProfileUnDisabled ? true : false}
             />
           </div>
           <div className='profile__wrapper'>
@@ -20,15 +31,15 @@ function Profile() {
             className='profile__input'
             value='pochta@yandex.ru'
             name='mail'
-            disabled
+            disabled = {isProfileUnDisabled ? true : false}
           />
           </div>
-          <button className='profile__save-button' type='submit'>
+          <button className={`profile__save-button ${isProfileUnDisabled && 'profile__save-button_activ'}`} type='submit' onClick={handleProfileUnDisabled}>
           Сохранить
           </button>
         </form>
-        <button className='profile__edit-button'>Редактировать</button>
-        <button className='profile__sign-out-button'>Выйти из аккаунта</button>
+        <button className={`profile__edit-button ${isProfileUnDisabled && 'profile__edit-button_hidden'}`} onClick={handleProfileActive}>Редактировать</button>
+        <button className={`profile__sign-out-button ${isProfileUnDisabled && 'profile__sign-out-button_hidden'}`}>Выйти из аккаунта</button>
       </section>
     </>
     

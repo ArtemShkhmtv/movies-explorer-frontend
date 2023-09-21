@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import logo from '../../images/logo.svg';
 
@@ -39,9 +40,9 @@ function Register() {
         </button>
         <p className="register-button__text">
         Уже зарегистрированы?{" "}
-        {/* <Link className="register__link-to-sign-in" to="/sign-in">
+        <Link to='/signup' className="register__link-to-sign-in">
           Войти
-        </Link> */}
+        </Link>
       </p>
       </form>
     </section>
