@@ -4,7 +4,7 @@ function AboutProject() {
       <h3 className='section-title'>О проекте</h3>
       <div className='about-project__wrapper'>
         <div className='about-project__stage-wrapper'>
-          <p className='about-project__stage'>Дипломный проект включал 5 этапов</p>
+          <h3 className='about-project__stage'>Дипломный проект включал 5 этапов</h3>
           <p className='about-project__description'>Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.</p>
         </div>
         <div className='about-project__stage-wrapper'>

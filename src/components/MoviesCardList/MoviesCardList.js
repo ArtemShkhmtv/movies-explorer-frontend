@@ -6,16 +6,16 @@ function MoviesCardList () {
   return (
     <section className='cards-grid'>
       <div className="cards-grid__wrapper">
-        <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/>
-        <MoviesCard/>
+        <MoviesCard alt={'постер'}/>
+        <MoviesCard alt={'постер'}/>
+        <MoviesCard alt={'постер'}/>
+        <MoviesCard alt={'постер'}/>
+        <MoviesCard alt={'постер'}/>
+        <MoviesCard alt={'постер'}/>
+        <MoviesCard alt={'постер'}/>
+        <MoviesCard alt={'постер'}/>
       </div>
-      <button className='cards-grid__add-btn'>Ещё</button>
+      <button className='cards-grid__add-btn' type='button'>Ещё</button>
     </section>
     
   )

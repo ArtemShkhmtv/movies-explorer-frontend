@@ -14,7 +14,7 @@
 }
 
 .about-project__wrapper {
-  padding: 50px 0 110px 0;
+  padding: 70px 0 110px 0;
   display: flex;
   gap: 54px;
 }
@@ -22,7 +22,7 @@
 .about-project__stage-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 26px;
 }
 
 .about-project__stage {
@@ -30,6 +30,8 @@
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.04em;
+  margin: 0;
+  padding: 0;
 }
 
 .about-project__description {
@@ -77,16 +79,17 @@
 
 @media screen and (max-width: 769px) {
   .about-project {
-    padding: 91px 50px 82px 50px;
+    padding: 90px 50px 82px 50px;
   }
 
   .about-project__wrapper {
     gap: 38px;
-    padding-bottom: 90px;
+    padding-top: 69px;
+    padding-bottom: 91px;
   }
 
   .about-project__stage-wrapper {
-    gap: 3px;
+    gap: 23px;
   }
 
   .about-project__description {

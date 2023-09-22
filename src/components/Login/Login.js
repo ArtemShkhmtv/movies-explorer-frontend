@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 function Login() {
   return(
-    <section className='login'>
-      <Link to='/' >
-        <img src={logo} alt='Логотип приложения' className='logo' />
+    <section className='login' >
+      <Link to='/' className='logo'>
+        <img src={logo} alt='Логотип приложения'  />
       </Link>
       <h1 className='login__title'>Рады видеть!</h1>
       <form className='login__form'>
         <div className='login__wrapper'>
-          <p className='login__input-name'>E-mail</p>
+          <label className='login__input-name'>E-mail</label>
           <input
           className='login__input'
           value='pochta@yandex.ru'
@@ -19,7 +19,7 @@ function Login() {
           />
         </div>
         <div className='login__wrapper'>
-          <p className='login__input-name'>Пароль</p>
+          <label className='login__input-name'>Пароль</label>
           <input
           className='login__input'
           type='password'
@@ -29,7 +29,7 @@ function Login() {
         <button className='login__submit-button' type='submit'>
         Войти
         </button>
-        <p className="login-button__text">
+        <p className="login__button-text">
         Ещё не зарегистрированы?{" "}
         <Link className="login__link-to-sign-up" to="/signin">
           Регистрация

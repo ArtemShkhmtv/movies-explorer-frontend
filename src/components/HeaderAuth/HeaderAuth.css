@@ -41,7 +41,7 @@
   background-color: rgba(7, 48, 66, 1);
 }
 
-.header__menu-btn {
+.header__menu-btn:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -246,5 +246,9 @@
 
   .navigation__menu {
     gap: 20px;
+  }
+
+  .header__btn-span {
+    width: 24px;
   }
 }

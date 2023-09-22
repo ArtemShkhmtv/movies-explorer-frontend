@@ -1,5 +1,5 @@
 .login {
-  padding: 67px 0;
+  padding: 70px 0;
   flex-direction: column;
   max-width: 396px;
   margin: 0 auto;
@@ -9,12 +9,14 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 1.21;
-  margin: 40px 0;
+  margin: 37px 0;
 }
 
 .login__wrapper {
   border-bottom: 1px solid rgba(232, 232, 232, 1);
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .login__input-name {
@@ -35,13 +37,13 @@
 }
 
 .login__input:focus {
-  outline: none;
+  outline: 1px solid rgba(52, 86, 243, 0.7);
 }
 
 .login__submit-button {
   margin: 196px 0 19px 0;
   width: 100%;
-  padding: 13px 0;
+  padding: 14px 0;
   border: none;
   background-color: rgba(52, 86, 243, 1);
   color: rgba(255, 255, 255, 1);
@@ -55,7 +57,7 @@
   cursor: pointer;
 }
 
-.login-button__text {
+.login__button-text {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.21;
@@ -77,9 +79,18 @@
   cursor: pointer;
 }
 
+.login__link-to-sign-up:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 769px) {
   .login {
     margin-top: 160px;
+  }
+
+  .login__title {
+    margin-top: 39px;
   }
 
   .login__wrapper {
@@ -93,7 +104,7 @@
 
 @media screen and (max-width: 420px) {
   .login {
-    padding: 56px 30px 10px 30px;
+    padding: 55px 30px 10px 30px;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -101,7 +112,7 @@
 
   .login__title {
     text-align: center;
-    margin: 50px 0 80px 0;
+    margin: 47px 0 80px 0;
   }
 
   .login__wrapper {
@@ -114,11 +125,22 @@
   }
 
   .login__submit-button {
-    margin-top: 286px;
-    padding-top: 13px;
+    margin-top: 284px;
+    margin-bottom: 16px;
+    padding-top: 14px;
     padding-right: 13px;
     font-size: 12px;
     font-weight: 500;
     line-height: 1.25;
+  }
+
+  .login__button-text {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+
+  .login__link-to-sign-up {
+    font-size: 12px;
+    line-height: 1.21;
   }
 }

@@ -7,19 +7,18 @@ function HeaderNoAuth() {
       <Link to='/' >
         <img src={logo} alt='Логотип приложения' className='logo' />
       </Link>
-      <div className='header__wrapper'>
+      <nav className='header__wrapper'>
         <Link to='/signin'>
-          <button className='header__signup-btn'>
+          <button className='header__signup-btn' type='button'>
             Регистрация
           </button>    
         </Link>
         <Link to='/signup'>
-          <button className='header__signin-btn'>
+          <button className='header__signin-btn' type='button'>
             Войти
           </button>  
         </Link>
-        
-      </div>
+      </nav>
       
     </header>
     

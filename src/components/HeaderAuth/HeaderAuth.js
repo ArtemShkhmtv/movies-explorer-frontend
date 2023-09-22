@@ -23,13 +23,13 @@ function HeaderAuth() {
       <Link to='/' >
         <img src={logo} alt='Логотип приложения' className='logo' />
       </Link>
-      <button onClick={handleMenuOpen} className={location.pathname === '/' ? 'header__menu-btn' : 'header__menu-btn header__menu-btn_white'}>
+      <button onClick={handleMenuOpen} className={location.pathname === '/' ? 'header__menu-btn' : 'header__menu-btn header__menu-btn_white'} type='button'>
         <span className={location.pathname === '/' ? 'header__btn-span' : 'header__btn-span header__btn-span_white'}></span>
         <span className={location.pathname === '/' ? 'header__btn-span' : 'header__btn-span header__btn-span_white'}></span>
         <span className={location.pathname === '/' ? 'header__btn-span' : 'header__btn-span header__btn-span_white'}></span>
       </button>
         <nav className={isMenuOpen ? 'navigation navigation_opened' : 'navigation'}> 
-          <button onClick={closeAllPopups} className='close-button'></button>
+          <button onClick={closeAllPopups} className='close-button' type='button'></button>
           <div className='navigation__menu'>
             <NavLink to='/' className={location.pathname === '/' ? ({isActive}) =>`${isActive ? 'navigation__item navigation__item_selected navigation__item_white' : 'navigation__item navigation__item_white'}` : ({isActive}) =>`${isActive ? 'navigation__item navigation__item_selected' : 'navigation__item'}`}>
               Главная
@@ -49,7 +49,6 @@ function HeaderAuth() {
           </Link>
           
         </nav>
-        
     </header>
     <div className={isMenuOpen ? 'overlay overlay_opened' : 'overlay' }></div>      
     </>

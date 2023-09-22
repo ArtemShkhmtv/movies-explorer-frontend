@@ -1,5 +1,5 @@
 .register {
-  padding: 67px 0;
+  padding: 70px 0;
   flex-direction: column;
   max-width: 396px;
   margin: 0 auto;
@@ -9,12 +9,14 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 1.21;
-  margin: 40px 0;
+  margin: 37px 0 39px 0;
 }
 
 .register__wrapper {
   border-bottom: 1px solid rgba(232, 232, 232, 1);
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .register__input-name {
@@ -34,14 +36,14 @@
   margin-bottom: 7px;
 }
 
-.register__input {
-  outline: none;
+.register__input:focus {
+  outline: 1px solid rgba(52, 86, 243, 0.7);
 }
 
 .register__submit-button {
   margin: 128px 0 19px 0;
   width: 100%;
-  padding: 13px 0;
+  padding: 14px 0;
   border: none;
   background-color: rgba(52, 86, 243, 1);
   color: rgba(255, 255, 255, 1);
@@ -55,7 +57,7 @@
   cursor: pointer;
 }
 
-.register-button__text {
+.register__button-text {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.21;
@@ -79,11 +81,15 @@
 
 @media screen and (max-width: 769px) {
   .register {
-    margin-top: 160px;
+    margin-top: 162px;
   }
 
   .register__wrapper {
     margin-bottom: 24px;
+  }
+
+  .register__submit-button {
+    padding-top: 16px;
   }
 }
 
@@ -97,25 +103,30 @@
 
   .register__title {
     text-align: center;
-    margin: 50px 0 80px 0;
+    margin: 45px 0 80px 0;
   }
 
   .register__wrapper {
     margin-bottom: 26px;
   }
 
-  .logo {
-    display: inline-block;
-    margin: 0 auto;
-  }
-
   .register__submit-button {
     margin-top: 215px;
-    padding-top: 13px;
-    padding-right: 13px;
+    margin-bottom: 16px;
+    padding-top: 15px;
     font-size: 12px;
     font-weight: 500;
     line-height: 1.25;
+  }
+
+  .register__button-text {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+
+  .register__link-to-sign-in {
+    font-size: 12px;
+    line-height: 1.21;
   }
 
 }

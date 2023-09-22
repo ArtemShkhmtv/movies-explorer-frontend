@@ -23,35 +23,34 @@ function App() {
           {isLoggedIn?<HeaderAuth/> : <HeaderNoAuth/>}
         </>
         )}
-      
-      <Routes>
-        <Route path='/' element={
-          <Main />
-        }/>
-        <Route path='/movies' element={
-          <Movies />
-        }/>
-        <Route path='/saved-movies' element={
-          <SavedMovies />
-        }/>
-        <Route path='/profile' element={
-          <Profile />
-        }/>
-        <Route path='/signin' element={
-          <Register />
-        }/>
-        <Route path='/signup' element={
-          <Login />
-        }/>
-        <Route path='*' element={
-          <NotFound />
-        }/>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path='/' element={
+            <Main />
+          }/>
+          <Route path='/movies' element={
+            <Movies />
+          }/>
+          <Route path='/saved-movies' element={
+            <SavedMovies />
+          }/>
+          <Route path='/profile' element={
+            <Profile />
+          }/>
+          <Route path='/signin' element={
+            <Register />
+          }/>
+          <Route path='/signup' element={
+            <Login />
+          }/>
+          <Route path='*' element={
+            <NotFound />
+          }/>
+        </Routes>
+      </main>
       {(location.pathname === '/' || location.pathname === '/movies' || location.pathname === '/saved-movies')  && (
           <Footer />
         )}
-      
-      
     </div>
     
   );

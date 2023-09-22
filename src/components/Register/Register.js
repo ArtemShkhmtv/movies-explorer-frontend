@@ -5,13 +5,13 @@ import logo from '../../images/logo.svg';
 function Register() {
   return(
     <section className='register'>
-      <Link to='/' >
-        <img src={logo} alt='Логотип приложения' className='logo' />
+      <Link to='/' className='logo'>
+        <img src={logo} alt='Логотип приложения' />
       </Link>
       <h1 className='register__title'>Добро пожаловать!</h1>
       <form className='register__form'>
         <div className='register__wrapper'>
-          <p className='register__input-name'>Имя</p>
+          <label className='register__input-name'>Имя</label>
           <input
             className='register__input'
             value='Виталий'
@@ -19,7 +19,7 @@ function Register() {
           />
         </div>
         <div className='register__wrapper'>
-          <p className='register__input-name'>E-mail</p>
+          <label className='register__input-name'>E-mail</label>
           <input
           className='register__input'
           value='pochta@yandex.ru'
@@ -27,7 +27,7 @@ function Register() {
           />
         </div>
         <div className='register__wrapper'>
-          <p className='register__input-name'>Пароль</p>
+          <label className='register__input-name'>Пароль</label>
           <input
           className='register__input'
           value='pochta@yandex.ru'
@@ -38,7 +38,7 @@ function Register() {
         <button className='register__submit-button' type='submit'>
           Зарегистрироваться
         </button>
-        <p className="register-button__text">
+        <p className="register__button-text">
         Уже зарегистрированы?{" "}
         <Link to='/signup' className="register__link-to-sign-in">
           Войти

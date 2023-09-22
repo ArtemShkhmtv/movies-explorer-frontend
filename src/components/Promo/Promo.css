@@ -54,7 +54,7 @@
   .promo {
     flex-direction: column-reverse;
     align-items: center;
-    padding-top: 140px;
+    padding-top: 135px;
     padding-bottom: 78px;
     gap: 48px;
   }
@@ -83,7 +83,7 @@
 
 @media screen and (max-width: 480px) {
   .promo {
-    padding: 70px 10px 32px 10px;
+    padding: 63px 10px 32px 10px;
     gap: 44px;
   }
 
@@ -101,7 +101,7 @@
   }
 
   .promo__subtitle {
-    margin-bottom: 80px;
+    margin-bottom: 82px;
   }
 
 }

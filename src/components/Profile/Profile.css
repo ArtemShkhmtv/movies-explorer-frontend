@@ -1,5 +1,5 @@
 .profile {
-  padding: 66px 70px 70px 70px;
+  padding: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,5 +128,26 @@
 
   .profile__edit-button { 
     margin-top: 193px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profile {
+    padding-top: 63px;
+  }
+
+  .profile__name {
+    margin-bottom: 64px;
+  }
+
+  .profile__edit-button {
+    margin-top: 361px;
+    font-size: 12px;
+    line-height: 1.21;
+  }
+
+  .profile__sign-out-button {
+    font-size: 12px;
+    line-height: 1.21;
   }
 }
