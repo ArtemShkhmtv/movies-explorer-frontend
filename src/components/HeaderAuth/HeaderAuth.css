@@ -1,0 +1,254 @@
+.overlay {
+  position:absolute;
+  background-color: black;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  opacity: 0.3;
+  position: fixed;
+  display: none;
+}
+
+.overlay_opened {
+  display: block;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgba(7, 48, 66, 1);
+  padding: 18px 70px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.header_white {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.header__menu-btn {
+  width: 44px;
+  height: 44px;
+  justify-self: flex-end;
+  display: none;
+  border: none;
+  padding: 0;
+  padding-top: 5px;
+  background-color: rgba(7, 48, 66, 1);
+}
+
+.header__menu-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.header__menu-btn_white {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.header__btn-span {
+  display: block;
+  background-color: rgba(255, 255, 255, 1);
+  width: 28px;
+  height: 3px;
+  margin: 0 8px 7px 8px;
+}
+
+.header__btn-span_white {
+  background-color: rgba(0, 0, 0, 1);
+
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-button {
+  display: none;
+}
+
+.close-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.navigation__menu {
+  display: flex;
+  gap: 16px;
+  margin-left: 85px;
+  list-style-type: none;
+  align-items: center;
+}
+
+.navigation__item {
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.38;
+  color: rgba(0, 0, 0, 1);
+}
+
+.navigation__item_white {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navigation__item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.navigation__item_selected {
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.navigation__item:first-child {
+  display: none;
+}
+
+.navigation__auth-menu {
+  background-color: rgba(43, 224, 128, 1);
+  display: flex;
+  border-radius: 40px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 3px 0 11px;
+  margin: 6px 0;
+  text-decoration: none;
+}
+
+.navigation__auth-menu:hover {
+  opacity: 0.7;
+}
+
+.navigation__auth-menu_films {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
+}
+
+.navigation__user {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  font-size: 13px;
+  margin: 0;
+}
+
+.navigation__user-logo-wrapper {
+  background-color: rgba(249, 249, 249, 1);
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 769px) {
+
+  .header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .header__menu-btn {
+    display: block;
+  }
+
+  .navigation {
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 520px;
+    padding: 25px 25px 90px 25px;
+    background-color: white;
+    display: none;
+    z-index: 11;
+    box-sizing: border-box;
+  }
+
+  .navigation_opened {
+    display: flex;
+    position: fixed;
+  }
+
+  .close-button {
+    display: block;
+    margin: 0 0 112px auto;
+    width: 22px;
+    height: 22px;
+    background: url(../../images/close-button-logo.svg) no-repeat center / cover;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navigation__menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    gap: 23px;
+  }
+
+  .navigation__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.21;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .navigation__item_selected {
+    border-color: rgba(0, 0, 0, 1);
+  }
+
+  .navigation__item:first-child {
+    display: block;
+  }
+
+  .navigation__main-page {
+    display: block;
+  }
+
+  .navigation__auth-menu {
+    margin-top: auto;
+    margin: auto auto 0 auto;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
+
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .navigation {
+    min-width: 100%;
+    padding: 17px 17px 86px 17px;
+  }
+
+  .close-button {
+    margin-bottom: 105px;
+  }
+
+  .navigation__menu {
+    gap: 20px;
+  }
+
+  .header__btn-span {
+    width: 24px;
+  }
+}

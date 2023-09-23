@@ -1,0 +1,132 @@
+.register {
+  padding: 70px 0;
+  flex-direction: column;
+  max-width: 396px;
+  margin: 0 auto;
+}
+
+.register__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.21;
+  margin: 37px 0 39px 0;
+}
+
+.register__wrapper {
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register__input-name {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: rgba(160, 160, 160, 1);
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.register__input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  border: none;
+  margin-bottom: 7px;
+}
+
+.register__input:focus {
+  outline: 1px solid rgba(52, 86, 243, 0.7);
+}
+
+.register__submit-button {
+  margin: 128px 0 19px 0;
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  background-color: rgba(52, 86, 243, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  font-weight: 1.21;
+  line-height: 17px;
+}
+
+.register__submit-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.register__button-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: rgba(160, 160, 160, 1);
+  text-align: center;
+  margin: 0;
+}
+
+.register__link-to-sign-in {
+  color: rgba(52, 86, 243, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  text-decoration: none;
+}
+
+.register__link-to-sign-in:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 769px) {
+  .register {
+    margin-top: 162px;
+  }
+
+  .register__wrapper {
+    margin-bottom: 24px;
+  }
+
+  .register__submit-button {
+    padding-top: 16px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .register {
+    padding: 56px 30px 10px 30px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .register__title {
+    text-align: center;
+    margin: 45px 0 80px 0;
+  }
+
+  .register__wrapper {
+    margin-bottom: 26px;
+  }
+
+  .register__submit-button {
+    margin-top: 215px;
+    margin-bottom: 16px;
+    padding-top: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  .register__button-text {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+
+  .register__link-to-sign-in {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+
+}

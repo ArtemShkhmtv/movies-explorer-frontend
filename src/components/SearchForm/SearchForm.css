@@ -1,0 +1,132 @@
+.search-form {
+  padding: 70px;
+}
+
+.search-form__form {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+}
+
+.search-form__input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+
+.search-form__input:focus{
+  outline: 1px solid rgba(52, 86, 243, 0.7);
+}
+
+.search-form__input::placeholder {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  color: rgba(160, 160, 160, 1);
+}
+
+.search-form__btn {
+  border: none;
+  padding: 7px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.64;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(52, 86, 243, 1);
+  border-radius: 15px;
+}
+
+.search-form__btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.filter-checkbox {
+  display: flex;
+  margin-top: 35px;
+  align-items: center;
+  gap: 14px;
+}
+
+.filter-checkbox__nativ {
+  display: none;
+}
+
+.filter-checkbox__custom {
+  display: flex;
+  width: 34px;
+  border-radius: 20px;
+  padding: 2px;
+  background-color: rgba(235, 235, 235, 1);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.filter-checkbox__custom:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.filter-checkbox__button{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.filter-checkbox__button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.filter-checkbox__name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.38;
+}
+
+.filter-checkbox__nativ:checked + .filter-checkbox__custom {
+  background-color: rgba(43, 224, 128, 1);
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 769px) {
+
+  .search-form {
+    padding: 78px 30px;
+  }
+
+  .filter-checkbox {
+    flex-direction: row-reverse;
+    gap: 17px;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .search-form {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 82px;
+  }
+
+  .search-form__input::placeholder {
+    line-height: 1.22;
+    font-size: 18px;
+  }
+
+  .filter-checkbox {
+    justify-content: center;
+    margin-top: 40px;
+    gap: 15px;
+  }
+
+  .filter-checkbox__name {
+    font-size: 11px;
+    line-height: 1.64;
+
+  }
+}
