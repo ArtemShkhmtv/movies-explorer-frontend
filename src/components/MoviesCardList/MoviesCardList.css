@@ -23,6 +23,10 @@
   cursor: pointer;
 }
 
+.cards-grid__add-btn_hidden {
+  display: none;
+}
+
 @media screen and (max-width: 1000px) {
   .cards-grid {
     padding: 0 30px;
@@ -40,6 +44,9 @@
     margin-top: 16px;
     margin-bottom: 110px;
     }
+  
+  
+  
 }
 
 @media screen and (max-width: 440px) {

@@ -14,9 +14,22 @@
 
 .login__wrapper {
   border-bottom: 1px solid rgba(232, 232, 232, 1);
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
+}
+
+.login__error {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: rgba(255, 48, 85, 1);
+  margin: 0 0 10px 0;
+  height: 20px;
+}
+
+.login__error-hidden {
+  visibility: hidden;
 }
 
 .login__input-name {
@@ -41,7 +54,7 @@
 }
 
 .login__submit-button {
-  margin: 196px 0 19px 0;
+  margin: 0 0 19px 0;
   width: 100%;
   padding: 14px 0;
   border: none;
@@ -55,6 +68,15 @@
 .login__submit-button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.login__submit-button_disabled {
+  background: rgba(248, 248, 248, 1);
+  color: rgba(194, 194, 194, 1);
+}
+
+.login__submit-button_disabled:hover {
+  cursor: default;
 }
 
 .login__button-text {
@@ -84,6 +106,21 @@
   cursor: pointer;
 }
 
+.login__api-error {
+  margin: 110px 0 13px 0;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.18;
+  color: rgba(255, 48, 85, 1);
+  text-align: center;
+  height: 11px;
+}
+
+.login__api-error-hidden {
+  visibility: hidden;
+}
+
+
 @media screen and (max-width: 769px) {
   .login {
     margin-top: 160px;
@@ -91,14 +128,6 @@
 
   .login__title {
     margin-top: 39px;
-  }
-
-  .login__wrapper {
-    margin-bottom: 24px;
-  }
-  
-  .login__submit-button {
-    margin-top: 200px;
   }
 }
 
@@ -115,17 +144,12 @@
     margin: 47px 0 80px 0;
   }
 
-  .login__wrapper {
-    margin-bottom: 26px;
-  }
-
   .logo {
     display: inline-block;
     margin: 0 auto;
   }
 
   .login__submit-button {
-    margin-top: 284px;
     margin-bottom: 16px;
     padding-top: 14px;
     padding-right: 13px;

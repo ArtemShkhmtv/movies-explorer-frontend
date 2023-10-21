@@ -3,10 +3,10 @@ import userPhoto from '../../images/student.png';
 function AboutMe() {
   return (
     <section className='about-me'>
-      <h3 className='section-title'>Студент</h3>
+      <h2 className='section-title'>Студент</h2>
       <div className='about-me__profile'>
         <div className='about-me__wrapper'>
-          <h1 className='about-me__title'>Виталий</h1>
+          <h3 className='about-me__title'>Виталий</h3>
           <h4 className='about-me__subtitle'>Фронтенд-разработчик, 30 лет</h4>
           <p className='about-me__description'>Я&nbsp;родился и&nbsp;живу в&nbsp;Саратове, 
             закончил факультет экономики СГУ. У&nbsp;меня есть жена 
