@@ -2,6 +2,9 @@
 Сайт дипломного проекта:
 https://artpr.nomoredomainsicu.ru
 
+Пулл-реквест:
+https://github.com/ArtemShkhmtv/movies-explorer-frontend/compare/main...level-3
+
 Репозиторий проекта:
 https://github.com/ArtemShkhmtv/movies-explorer-frontend
 
