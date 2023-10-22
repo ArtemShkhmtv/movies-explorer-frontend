@@ -1,5 +1,6 @@
 # movies-explorer-frontend
-Фронтенд дипломного проекта
+Сайт дипломного проекта:
+https://artpr.nomoredomainsicu.ru
 
 Репозиторий проекта:
 https://github.com/ArtemShkhmtv/movies-explorer-frontend

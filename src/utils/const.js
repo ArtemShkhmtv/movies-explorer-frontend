@@ -1,11 +1,3 @@
-// const enableValidationConfig = {
-//   formSelector: ".popup__container",
-//   inputSelector: ".popup__text",
-//   submitButtonSelector: ".popup__save-botton",
-//   inactiveButtonClass: "popup__save-botton_disabled",
-//   inputErrorClass: "popup__text_error",
-//   errorClass: "popup__error-message_type_active",
-// };
 
 const DESKTOP_WIDTH = 1239;
 const MINIDESKTOP_WIDTH = 999;
@@ -21,8 +13,8 @@ const MINIDESKTOP_MOVIES_ADD = 3;
 const TABLET_MOVIES_ADD = 2;
 
 const dataAuthApi = {
-  // baseUrl: "https://api.artpr.nomoredomainsicu.ru",
-  baseUrl: "http://localhost:3000",
+  baseUrl: "https://api.artpr.nomoredomainsicu.ru",
+  // baseUrl: "http://localhost:3000",
   headers: {
     "Content-Type": "application/json",
   },
