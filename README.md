@@ -3,7 +3,7 @@
 https://artpr.nomoredomainsicu.ru
 
 Пулл-реквест:
-https://github.com/ArtemShkhmtv/movies-explorer-frontend/compare/main...level-3
+https://github.com/ArtemShkhmtv/movies-explorer-frontend/pull/2
 
 Репозиторий проекта:
 https://github.com/ArtemShkhmtv/movies-explorer-frontend
