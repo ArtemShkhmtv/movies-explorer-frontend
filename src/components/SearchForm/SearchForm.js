@@ -2,7 +2,7 @@ import React from "react";
 import { moviesApi } from "../../utils/MoviesApi";
 import { useLocation } from "react-router-dom";
 
-function SearchForm({ handlePreloaderActive, handleLocalStorageData, handleResize }) {
+function SearchForm({ handlePreloaderActive, handleLocalStorageData, handleResize, checkboxState, handlecheckboxState }) {
   const location = useLocation();
 
 // стейт валидации при сабмите
@@ -21,6 +21,14 @@ const [isSavedMovies, setSavedMovies] = React.useState(false);
 function handleSavedMovies(status) {
   setSavedMovies(status);
 }
+
+// // стейт чекбокса сохраненных фильмов
+// const [isCheckboxSaveMovies, setCheckboxSaveMovies] = React.useState(false);
+
+// // обработчик проверки текущей страницы
+// function handleCheckboxSaveMovies() {
+//   setSavedMovies(!isCheckboxSaveMovies);
+// }
 
 
   // стейт строки поиска
@@ -43,13 +51,13 @@ function handleSavedMovies(status) {
     setResultMessage(text);
   }
 
-  // стейт состояния чекбокса
-  const [checkboxState, setcheckboxState] = React.useState(false);
+  // // стейт состояния чекбокса
+  // const [checkboxState, setcheckboxState] = React.useState(false);
 
-  function handlecheckboxState() {
-    setcheckboxState(!checkboxState);
-    localStorage.setItem('checkboxState', JSON.stringify(!checkboxState));
-  }
+  // function handlecheckboxState() {
+  //   setcheckboxState(!checkboxState);
+  //   localStorage.setItem('checkboxState', JSON.stringify(!checkboxState));
+  // }
 
   // проверка наличия данных в локалсторадж
   React.useEffect(() => {
@@ -66,15 +74,19 @@ function handleSavedMovies(status) {
 
     const storageCheckboxState = JSON.parse(localStorage.getItem('checkboxState'));
 
-    if (storageCheckboxState) {
-      if (storageCheckboxState === checkboxState) {
-        handlecheckboxState();
-        handlecheckboxState(); // двойновый вызов для имитации двойного отрицания, обновления стейта состояния чекбокса при загрузке страницы
+    if (location.pathname !== '/saved-movies') {
+      if (storageCheckboxState) {
+        if (storageCheckboxState === checkboxState) {
+          handlecheckboxState();
+          handlecheckboxState(); // двойновый вызов для имитации двойного отрицания, обновления стейта состояния чекбокса при загрузке страницы
+        } else {
+          handlecheckboxState();
+        } 
       } else {
-        handlecheckboxState();
-      } 
+        localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
+      }
     } else {
-      localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
+      return;
     }
 
     location.pathname !== '/saved-movies' && getLocalStorageData();
@@ -94,7 +106,7 @@ function handleSavedMovies(status) {
     const moviesData = JSON.parse(localStorage.getItem('moviesData'));
       const search = moviesData.filter( (item) => {
         if (checkboxState) {
-          return (item.duration < 60) && (item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 
+          return (item.duration < 41) && (item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 
           || item.nameEN.toLowerCase().includes(formValue.search.toLowerCase()));
         } else {
           return item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 
@@ -127,7 +139,7 @@ function handleSavedMovies(status) {
               handleResultMessage('');
               const search = res.filter( (item) => {
                 if (checkboxState) {
-                  return (item.duration < 60) && (item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 
+                  return (item.duration < 41) && (item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 
                   || item.nameEN.toLowerCase().includes(formValue.search.toLowerCase()));
                 } else {
                   return item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 
@@ -173,7 +185,7 @@ function handleSavedMovies(status) {
     const favoriteMoviesData = JSON.parse(localStorage.getItem('favoriteMoviesData'));
     const search = favoriteMoviesData.filter( (item) => {
       if (checkboxState) {
-        return (item.duration < 60) && (item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 
+        return (item.duration < 41) && (item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 
         || item.nameEN.toLowerCase().includes(formValue.search.toLowerCase()));
       } else {
         return item.nameRU.toLowerCase().includes(formValue.search.toLowerCase()) 

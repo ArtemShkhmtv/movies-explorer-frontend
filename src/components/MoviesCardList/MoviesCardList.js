@@ -29,11 +29,12 @@ function MoviesCardList ({ localStorageData, moviesToView, moviesToAdd, handleMo
             nameEn = {el.nameEN}
             thumbnail = { el.trailerLink}
             handleLocalStorageData={handleLocalStorageData}
+            localStorageData = {localStorageData}
             />
           )
         })}
       </div>
-      <button className={(moviesToView < localStorageData.length) ? 'cards-grid__add-btn' : 'cards-grid__add-btn_hidden'} type='button' onClick={addMovies}>Ещё</button>
+      <button className={ ((location.pathname === '/saved-movies') || (moviesToView >= localStorageData.length)) ?  'cards-grid__add-btn_hidden' : 'cards-grid__add-btn' } type='button' onClick={addMovies}>Ещё</button>
     </section>
     
   )

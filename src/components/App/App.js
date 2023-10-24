@@ -127,7 +127,6 @@ function App() {
           }
           setLoggedIn(true);
           navigate("/movies");
-          // handleSelectedEmail(data.email);
         })
         .catch((err) => console.error(err));
   }

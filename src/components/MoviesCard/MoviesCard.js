@@ -5,7 +5,7 @@ import likeAct from '../../images/like_act.svg';
 import deleteLogo from '../../images/delete-logo.svg';
 import { useLocation } from "react-router-dom";
 
-function MoviesCard({nameRu, poster, duration, trailer, country, director, year, description, nameEn, movieId, thumbnail, handleLocalStorageData}) {
+function MoviesCard({nameRu, poster, duration, trailer, country, director, year, description, nameEn, movieId, thumbnail, handleLocalStorageData, localStorageData}) {
 
   const location = useLocation();
 
@@ -34,8 +34,9 @@ function MoviesCard({nameRu, poster, duration, trailer, country, director, year,
       mainApi.deletMovie(favoriteMovie._id)
       .then((res) => {
         const newFavoriteMoviesData = JSON.parse(localStorage.getItem('favoriteMoviesData')).filter((item) => item.nameRU !== nameRu);
+        const newLocalStorageData = localStorageData.filter((item) => item.nameRU !== nameRu);
         localStorage.setItem('favoriteMoviesData', JSON.stringify(newFavoriteMoviesData));
-        (location.pathname === '/saved-movies') && handleLocalStorageData(newFavoriteMoviesData);
+        (location.pathname === '/saved-movies') && handleLocalStorageData(newLocalStorageData);
       }).catch((err) => {
         console.error(err);
       }).finally(() => {

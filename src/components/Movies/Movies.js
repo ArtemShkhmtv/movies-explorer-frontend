@@ -7,6 +7,13 @@ import { mainApi } from "../../utils/MainApi";
 
 function Movies({isPreloaderActive, handlePreloaderActive, handleLocalStorageData, localStorageData, moviesToView, moviesToAdd, handleMoviesToView, handleResize}) {
 
+  // стейт состояния чекбокса
+  const [checkboxState, setcheckboxState] = React.useState(false);
+
+  function handlecheckboxState() {
+    setcheckboxState(!checkboxState);
+    localStorage.setItem('checkboxState', JSON.stringify(!checkboxState));
+  }
 
   React.useEffect( () => {
     !localStorage.getItem('favoriteMoviesData') && getFavoriteMovies();
@@ -33,6 +40,8 @@ function Movies({isPreloaderActive, handlePreloaderActive, handleLocalStorageDat
         handlePreloaderActive = {handlePreloaderActive}
         handleLocalStorageData = {handleLocalStorageData}
         handleResize={handleResize}
+        checkboxState={checkboxState}
+        handlecheckboxState={handlecheckboxState}
       />
       {isPreloaderActive && <Preloader/>}
       {localStorageData && <MoviesCardList 
