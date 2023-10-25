@@ -21,7 +21,7 @@ function App() {
   const location = useLocation();
 
   // стейт входа в приложение
-  const [isLoggedIn, setLoggedIn] = React.useState(false);
+  const [isLoggedIn, setLoggedIn] = React.useState(true);
 
   function handleLoggedIn(status) {
     setLoggedIn(status);
@@ -117,6 +117,13 @@ function App() {
     //eslint-disable-next-line
   }, []);
 
+  React.useEffect(() => {
+    if (isLoggedIn && (location.pathname === '/signup' || location.pathname === '/signin')) {
+        navigate("/movies");
+      }
+  }, [isLoggedIn]);
+
+
   // обработчик проверки токена
   function checkToken() {
       authApi
@@ -126,9 +133,11 @@ function App() {
             return;
           }
           setLoggedIn(true);
-          navigate("/movies");
         })
-        .catch((err) => console.error(err));
+        .catch((err) => {
+          console.error(err);
+          setLoggedIn(false);
+        });
   }
 
 

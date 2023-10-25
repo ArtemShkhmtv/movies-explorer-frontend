@@ -13,8 +13,8 @@ const MINIDESKTOP_MOVIES_ADD = 3;
 const TABLET_MOVIES_ADD = 2;
 
 const dataAuthApi = {
-  baseUrl: "https://api.artpr.nomoredomainsicu.ru",
-  // baseUrl: "http://localhost:3000",
+  // baseUrl: "https://api.artpr.nomoredomainsicu.ru",
+  baseUrl: "http://localhost:3000",
   headers: {
     "Content-Type": "application/json",
   },

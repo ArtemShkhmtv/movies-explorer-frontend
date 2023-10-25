@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function NotFound() {
 const navigate = useNavigate();
   const toBack = () => {
-    navigate('/signup');
+    navigate(-1);
   }
 
   return(

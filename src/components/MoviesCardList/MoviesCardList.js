@@ -13,7 +13,7 @@ function MoviesCardList ({ localStorageData, moviesToView, moviesToAdd, handleMo
   return (
     <section className='cards-grid'>
       <div className="cards-grid__wrapper">
-        { (localStorageData && localStorageData.length !== 0 ) && localStorageData.slice(0, moviesToView).map ((el, num) => {
+        { (localStorageData && localStorageData.length !== 0 ) && localStorageData.slice(0, (location.pathname === '/saved-movies' ? localStorageData.length : moviesToView)).map ((el, num) => {
           return(
             <MoviesCard 
             key={el._id || el.id}
