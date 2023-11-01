@@ -30,9 +30,10 @@
   line-height: 1.21;
   border: none;
   color: rgba(52, 86, 243, 1);
-  margin: 180px 0 0 0;
-  padding-bottom: 84px;
+  margin: 180px 0 84px 0;
+  padding: 0px;
   text-decoration: none;
+  background-color: white;
 }
 
 .not-found__button:hover {
