@@ -1,12 +1,21 @@
 # movies-explorer-frontend
-Сайт дипломного проекта:
-https://artpr.nomoredomainsicu.ru
+# Проект Movies-explorer
+Репозиторий для фронтенда приложения проекта `Movies-explorer`, включающий фронтенд и бэкенд части приложения со следующими возможностями: 
+- авторизации и регистрации пользователей;
+- операции с карточками фильмов и пользователями;
+- валидация данных.
 
-Пулл-реквест:
-https://github.com/ArtemShkhmtv/movies-explorer-frontend/pull/2
 
-Репозиторий проекта:
-https://github.com/ArtemShkhmtv/movies-explorer-frontend
+Применяются технологии:
+* SPA;
+* CRA;
+* Реакт-хуки;
+* React Router;
+* Авторизация (cookie);
+* Классовый и функциональный компонентный подход.
+  
+  
+Системные требования:
 
-Макет проекта:
-https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/light-1?type=design&node-id=891-3857&mode=design&t=2o1n0jVrlmCiWxAF-0
+ JavaScript (ES6), HTML5, Node.js (не ниже v12.16.3), NPM (не ниже 6.11.3)
+ Приложение рекоммендовано к просмотру через браузеры Firefox, Chrome, Яндекс Браузер.
