@@ -18,3 +18,6 @@
 
  JavaScript (ES6), HTML5, Node.js (не ниже v12.16.3), NPM (не ниже 6.11.3)
  Приложение рекоммендовано к просмотру через браузеры Firefox, Chrome, Яндекс Браузер.
+
+Ссылка на проект:  
+https://movies-explorer-frontend-bice.vercel.app/
